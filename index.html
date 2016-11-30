@@ -1,52 +1,41 @@
 <!DOCTYPE html>
-<html ng-cloak ng-app="starter">
-<head translate-namespace="HEADER">
-    <meta charset="utf-8">
-    
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title translate>.LABEL_TITLE</title>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ionic App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
 
-    <!-- css mini -->
-    <link href="css/css.min.css" rel="stylesheet"></head>
-<body ng-controller="mainCtrl">
-    <ion-side-menus>
-        <ion-side-menu-content class="content0000">
-        <ion-nav-bar class="bar-assertive" align-title="center" translate-namespace="HEADER">
-            <ion-nav-buttons side="priamry">
-                <button class="button button-clear icon ion-navicon" ng-click="toggleLeft();"></button>
-            </ion-nav-buttons>
-            <ion-nav-title translate>.LABEL_TITLE</ion-nav-title>
-            <ion-nav-buttons side="secondary">
-                <button class="button button-clear icon ion-grid" ng-click="showPopoverMenu($event);"></button>
-            </ion-nav-buttons>
-        </ion-nav-bar>
-        <ion-nav-view class="include0000"></ion-nav-view>
-        <ion-footer-bar align-title="center" class="bar-assertive">
-            <div  class="buttons"  ng-if="model.view != '#/main'">
-                <button class="button button-clear icon ion-ios-undo-outline" ng-click="back()"></button>
-            </div>
-            <h1 class="title"></h1>
-            <div  ng-if="model.view == '#/wordListLearn'" class="buttons" >
-                <button class="button button-clear icon ion-ios-more-outline" ng-click="showActionSheetWordListLearn($event)"></button>
-            </div>
-            <div  ng-if="model.view == '#/allWordOfClass'" class="buttons" >
-                <button class="button button-clear icon ion-ios-download-outline" ng-click="showPopupExport()"></button>
-            </div>
-        </ion-footer-bar>
-    </ion-side-menu-content>
-    <ion-side-menu side="left" class="menuLeft0000" ng-include="'./templates/leftSidebar.html'"></ion-side-menu>
-</ion-side-menus>
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4e8ef7">
+  
+  <!-- cordova.js required for cordova apps -->
+  <script src="cordova.js"></script>
 
- <!-- mini lib file -->
-<script src="lib/lib.min.js"></script>
+  <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.log('Error', err));
+    }
+  </script>-->
 
-<!-- your app's js -->
- <script src="js/app.min.js"></script>
-<!-- <script src="js/modules/route.js"></script> -->
-<script src="js/module-app.min.js"></script>
-<script src="js/modules.min.js"></script>
-<script src="js/controller.min.js"></script>
-<!-- module -->
+  <link href="build/main.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Ionic's root component and where the app will load -->
+  <ion-app></ion-app>
+  <script src="assets/lib/parse-1.9.2.js"></script>
+  <!-- The polyfills js is generated during the build process -->
+  <script src="build/polyfills.js"></script>
+
+  <!-- The bundle js is generated during the build process -->
+  <script src="build/main.js"></script>
 
 </body>
 </html>
