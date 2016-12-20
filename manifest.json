@@ -3,7 +3,6 @@
     "short_name": "Voca-Fibo",
     "start_url": "index.html",
     "display": "standalone",
-    "orientation": "landscape",
     "icons": [{
             "src": "/fibonacci/assets/images/icon.ico",
             "sizes": "36x36",
