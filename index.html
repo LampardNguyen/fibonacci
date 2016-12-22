@@ -42,14 +42,18 @@
     <!-- The bundle js is generated during the build process -->
     <script src="build/main.js"></script>
     <script>
+        window.swRegistration = null;
         if ('serviceWorker' in navigator) {
-            console.log("Will the service worker register?");
-            navigator.serviceWorker.register('service-worker.js')
-                .then(function(reg) {
-                    console.log("Yes, it did.");
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('service-worker.js').then(function(swReg) {
+                    window.swRegistration = swReg;
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', swReg.scope);
                 }).catch(function(err) {
-                    console.log("No it didn't. This happened: ", err)
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
                 });
+            });
         }
     </script>
 </body>
