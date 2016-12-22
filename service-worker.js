@@ -79,12 +79,12 @@ self.addEventListener('fetch', (event) => {
     );
 });
 
-// self.addEventListener('notificationclick', function(event) {
-//     console.log('[Service Worker] Notification click Received.', event.notification);
+self.addEventListener('notificationclick', function(event) {
+    // console.log('[Service Worker] Notification click Received.', event.notification);
 
-//     event.notification.close();
-//     console.log(clients);
-//     event.waitUntil(
-//         clients.openWindow('https://developers.google.com/web/')
-//     );
-// });
+    event.notification.close();
+    // console.log(window);
+    // event.waitUntil(
+    //     evtEmitter.emit('notificationclick')
+    // );
+});
