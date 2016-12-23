@@ -1,6 +1,6 @@
 {
-    "name": "Voca-Fibo",
-    "short_name": "Voca-Fibo",
+    "name": "Fibo-Voca",
+    "short_name": "Fibo-Voca",
     "start_url": "index.html",
     "display": "standalone",
     "icons": [{
