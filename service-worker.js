@@ -85,6 +85,5 @@ self.addEventListener('notificationclick', function(event) {
     event.notification.close();
     // console.log(window);
     // event.waitUntil(
-    //     evtEmitter.emit('notificationclick')
     // );
 });
